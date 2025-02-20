@@ -1,6 +1,34 @@
 # 🤖MLServe - FastAPI ML Model Deployment
 🚧 UNDER ACTIVE DEVELOPMENT 🚧
 
+## 📑 Table of Contents  
+- [🚀 Overview](#-overview)  
+- [📌 Features](#-features)  
+- [🏗️ Architecture](#%EF%B8%8F-architecture)
+- [🛠️ Installation](#%EF%B8%8F-installation ) 
+  - [1️⃣ Clone the Repository](#1️⃣-clone-the-repository)  
+  - [2️⃣ Install Dependencies](#2️⃣-install-dependencies)  
+  - [3️⃣ Run FastAPI Server](#3️⃣-run-fastapi-server)  
+  - [4️⃣ Test API](#4️⃣-test-api)  
+- [🐳 Docker Setup](#-docker-setup)  
+  - [1️⃣ Build the Docker Image](#1️⃣-build-the-docker-image)  
+  - [2️⃣ Run the Container](#2️⃣-run-the-container)  
+- [📡 API Endpoints](#-api-endpoints)  
+  - [🔹 Root Endpoint](#-root-endpoint)  
+  - [🔹 Predict](#-predict)  
+- [📊 Prediction Charts](#-prediction-charts)  
+  - [📊 AAPL](#apple-aapl)
+  - [📊 MSFT](#microsoft-msft)
+  - [📊 GOOG](#google-goog)
+  - [📌 Interpreting the Prediction Charts](#-interpreting-the-prediction-charts)  
+- [🧠 Machine Learning Model Details](#-machine-learning-model-details)  
+  - [📊 Sample Forecast Visualization](#-sample-forecast-visualization)  
+  - [📌 Trend and Seasonality Components](#-trend-and-seasonality-components)  
+  - [🔍 Understanding the Forecast](#-understanding-the-forecast)  
+- [🚀 Future Enhancements](#-future-enhancements)  
+
+---
+
 ## 🚀 Overview
 
 This project demonstrates how to **serve a machine learning model** using **FastAPI** and **Docker** into production as a RESTful API using FastAPI. The API allows users to send data and receive stock price predictions using [Prophet](https://facebook.github.io/prophet/) ML model.
