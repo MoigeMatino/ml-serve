@@ -85,11 +85,68 @@ _Response:_ "Welcome to FastAPI ML Deployment"
     {
         "prediction": 0.92
     }
-    
+
+## 📊 Prediction Charts
+
+Here are sample stock price predictions generated using the **Prophet** model:
+
+### Apple (AAPL)
+![AAPL Stock Prediction](app/assets/AAPL_plot.png)
+
+### Microsoft (MSFT)
+![MSFT Stock Prediction](app/assets/MSFT_plot.png)
+
+### Google (GOOG)
+![GOOGL Stock Prediction](app/assets/GOOG_plot.png)
+
+### 📊 Interpreting the Prediction Charts
+
+When generating stock price forecasts using Prophet, the visualization includes:
+
+- **⚫ Black Dots (y)** → Actual historical stock prices used for training.
+- **🔵 Blue Line (ŷ or yhat)** → The model’s predicted stock price (**yhat**).
+- **🔹 Shaded Light Blue Area** → The confidence interval, representing the expected range of price fluctuations:
+  - **Upper Bound (yhat_upper)** → Maximum expected price.
+  - **Lower Bound (yhat_lower)** → Minimum expected price.
+
+📌 **Trend and Seasonality Components**:
+The model also breaks down the stock price into **trend** and **seasonality effects** which is covered in the next section.
 
 ## 🧠 Machine Learning Model Details
 
-The model used in this project is a **pretrained scikit-learn model**. It takes input features and returns a numerical prediction. You can replace it with any trained ML model (XGBoost, TensorFlow, PyTorch, etc.).
+The model used in this project is **Facebook Prophet**, which forecasts stock prices based on historical market data. It generates time-series predictions, showing both **trends** and **seasonal effects**.
+
+### 📊 Sample Forecast Visualization
+
+Here’s an example of how the model predicts stock prices over time:
+
+| Date        | Predicted Price ($) |
+|------------|--------------------|
+| 2025-02-20 | 190.12 |
+| 2025-02-21 | 191.45 |
+| 2025-02-22 | 192.78 |
+
+---
+
+### 📌 **Trend and Seasonality Components**
+Prophet decomposes the time-series data into **three main components**:
+
+1. **Trend** – The overall direction of the stock price over time.
+2. **Seasonality** – Repeating patterns at daily, weekly, or yearly intervals.
+3. **Holidays/Events** – External factors that impact stock prices.
+
+Here’s an example of the **trend and seasonal effects** visualized for MSFT:
+
+![Prediction Trend & Seasonality](app/assets/MSFT_plot_components.png)
+
+---
+
+### 🔍 **Understanding the Forecast**
+- The **blue line** represents the predicted stock price.
+- **Seasonality plots** (daily, weekly, yearly) reveal recurring patterns.
+
+These insights can help traders and analysts make **informed investment decisions**. 🚀
+
 
 ## 🚀 Future Enhancements
 
