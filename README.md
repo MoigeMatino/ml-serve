@@ -1,4 +1,5 @@
-# 🤖MLServe - FastAPI ML Model Deployment
+# 🧠 MLServe - FastAPI ML Model Deployment
+
 🚧 UNDER ACTIVE DEVELOPMENT 🚧
 
 ## 📑 Table of Contents  
@@ -29,11 +30,11 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This project demonstrates how to **serve a machine learning model** using **FastAPI** and **Docker** into production as a RESTful API using FastAPI. The API allows users to send data and receive stock price predictions using [Prophet](https://facebook.github.io/prophet/) ML model.
 
-## 📌 Features
+##  Features
 
 *   **FastAPI-based REST API** for serving ML predictions.
 *   **Dockerized deployment** for easy scalability.
@@ -41,14 +42,14 @@ This project demonstrates how to **serve a machine learning model** using **Fast
 *   **Model versioning and logging** to track performance.
 *   **CI/CD integration** (future enhancement) for automated deployments.
 
-## 🏗️ Architecture
+##  Architecture
 
 1.  **Pretrained ML Model** – A trained model is saved and loaded for inference.
 2.  **FastAPI Backend** – Exposes RESTful endpoints for making predictions.
 3.  **Docker Containerization** – The application runs inside a container for portability.
 4.  **(Optional) Cloud Deployment** – Can be deployed on AWS/GCP/Azure using Kubernetes or serverless functions.
 
-## 🛠️ Installation
+## Installation
 
 ### 1️⃣ Clone the repository
 
@@ -87,13 +88,6 @@ Open your browser and visit:
 
 ## 📡 API Endpoints
 
-### 🔹 Root Endpoint
-
-    GET /
-    
-
-_Response:_ "Welcome to FastAPI ML Deployment"
-
 ### 🔹 Predict
 
     POST /predict/
@@ -102,16 +96,39 @@ _Response:_ "Welcome to FastAPI ML Deployment"
 **Request Body:**
 
     {
-        "feature1": 1.23,
-        "feature2": 4.56,
-        "feature3": 7.89
+        "ticker": "AAPL"
+        
     }
     
 
 **Response:**
 
     {
-        "prediction": 0.92
+        "ticker": "AAPL",
+        "forecast": 
+        [
+              {
+                  "ds": "2025-02-22T00:00:00",
+                  "trend": 244.01168239424806,
+                  "yhat_lower": 232.09980241706867,
+                  "yhat_upper": 249.23639821076168,
+                  "trend_lower": 244.01168239424806,
+                  "trend_upper": 244.01168239424806,
+                  "additive_terms": -2.6701240826347483, 
+                  .......
+              },
+              {
+                  "ds": "2025-02-23T00:00:00",
+                  "trend": 244.1718582137145,
+                  "yhat_lower": 232.24244874958652,
+                  "yhat_upper": 249.32422233689414,
+                  "trend_lower": 244.1718582137145,
+                  "trend_upper": 244.1718582137145,
+                  "additive_terms": -3.333045887720604,
+                  ......
+              },
+              .....
+        ]
     }
 
 ## 📊 Prediction Charts
