@@ -59,11 +59,11 @@ def predict(ticker, days=7):
     forecast = model.predict(df)
     
     # Save plots in assets folder
-    plot_path = ASSETS_DIR / f"{ticker}_plot.png"
-    components_plot_path = ASSETS_DIR / f"{ticker}_plot_components.png"
+    # plot_path = ASSETS_DIR / f"{ticker}_plot.png"
+    # components_plot_path = ASSETS_DIR / f"{ticker}_plot_components.png"
 
-    model.plot(forecast).savefig(plot_path)
-    model.plot_components(forecast).savefig(components_plot_path)
+    # model.plot(forecast).savefig(plot_path)
+    # model.plot_components(forecast).savefig(components_plot_path)
 
     return forecast.tail(days).to_dict("records")
 
