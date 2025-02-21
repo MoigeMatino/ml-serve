@@ -6,7 +6,7 @@ router = APIRouter()
 
 
 @router.post("/predict", response_model=StockOut, status_code=200)
-async def prediction(payload: StockIn):
+def prediction(payload: StockIn):
     ticker = payload.ticker
     prediction_list = predict(ticker)
     
