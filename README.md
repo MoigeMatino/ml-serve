@@ -64,14 +64,14 @@ This project demonstrates how to **serve a machine learning model** using **Fast
 
 ### 3️⃣ Run FastAPI server
 
-    uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    uvicorn app.main:app --host 0.0.0.0 --port 8008 --reload
     
 
 ### 4️⃣ Test API
 
 Open your browser and visit:
 
-    http://127.0.0.1:8000/docs
+    http://127.0.0.1:8008/docs
     
 
 ## 🐳 Docker Setup
