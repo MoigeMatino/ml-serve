@@ -3,8 +3,8 @@
 🚧 UNDER ACTIVE DEVELOPMENT 🚧
 
 ## 📑 Table of Contents  
-- [🚀 Overview](#-overview)  
-- [📌 Features](#-features)  
+- [💡 Overview](#-overview)  
+- [✨ Features](#-features)  
 - [🏗️ Architecture](#%EF%B8%8F-architecture)
 - [🛠️ Installation](#%EF%B8%8F-installation ) 
   - [1️⃣ Clone the Repository](#1️⃣-clone-the-repository)  
@@ -30,11 +30,11 @@
 
 ---
 
-## Overview
+## 💡 Overview
 
 This project demonstrates how to **serve a machine learning model** using **FastAPI** and **Docker** into production as a RESTful API using FastAPI. The API allows users to send data and receive stock price predictions using [Prophet](https://facebook.github.io/prophet/) ML model.
 
-##  Features
+##  ✨ Features
 
 *   **FastAPI-based REST API** for serving ML predictions.
 *   **Dockerized deployment** for easy scalability.
@@ -42,14 +42,14 @@ This project demonstrates how to **serve a machine learning model** using **Fast
 *   **Model versioning and logging** to track performance.
 *   **CI/CD integration** (future enhancement) for automated deployments.
 
-##  Architecture
+##  🏗️ Architecture
 
 1.  **Pretrained ML Model** – A trained model is saved and loaded for inference.
 2.  **FastAPI Backend** – Exposes RESTful endpoints for making predictions.
 3.  **Docker Containerization** – The application runs inside a container for portability.
 4.  **(Optional) Cloud Deployment** – Can be deployed on AWS/GCP/Azure using Kubernetes or serverless functions.
 
-## Installation
+## 🛠️ Installation
 
 ### 1️⃣ Clone the repository
 
