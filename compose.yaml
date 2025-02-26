@@ -4,7 +4,29 @@ services:
       context: .
     ports:
       - 8008:8008
+    env_file:
+      - .env
     volumes:
       - .:/app
+      - ./alembic/versions:/app/alembic/versions
+    depends_on:
+      - db
     
+  db:
+    image: postgres:16
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - 5435:5432
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db-data:
 
