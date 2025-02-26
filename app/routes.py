@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from .schemas import StockIn, StockOut
-from .model import predict
+from .ml_model import predict
 
 router = APIRouter()
 
