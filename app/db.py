@@ -1,7 +1,7 @@
 from sqlmodel import Session, SQLModel, create_engine
 
 from .dependencies import get_settings
-# from .models import * 
+from .models import * 
 
 settings = get_settings()
 
@@ -12,6 +12,6 @@ DATABASE_URL = (
 
 engine = create_engine(DATABASE_URL, echo=True)
 
-
-def init_db():
-    SQLModel.metadata.create_all(engine)
+# don't need this now that we have implemented alembic 
+# def init_db():
+#     SQLModel.metadata.create_all(engine)

@@ -4,8 +4,11 @@ services:
       context: .
     ports:
       - 8008:8008
+    env_file:
+      - .env
     volumes:
       - .:/app
+      - ./alembic/versions:/app/alembic/versions
     depends_on:
       - db
     
