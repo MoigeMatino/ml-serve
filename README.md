@@ -51,39 +51,26 @@ This project demonstrates how to **serve a machine learning model** using **Fast
 
 ## 🛠️ Installation
 
-### 1️⃣ Clone the repository
+### 1. Clone the repository
 
     git clone https://github.com/yourusername/fastapi-ml-deploy.git
     cd fastapi-ml-deploy
     
 
-### 2️⃣ Install dependencies
+### 2. Install dependencies
 
     pip install -r requirements.txt
-    
 
-### 3️⃣ Run FastAPI server
 
-    uvicorn app.main:app --host 0.0.0.0 --port 8008 --reload
-    
+### 3. Run the api
 
-### 4️⃣ Test API
+    docker-compose up
+
+### 4. Test API
 
 Open your browser and visit:
 
     http://127.0.0.1:8008/docs
-    
-
-## 🐳 Docker Setup
-
-### 1️⃣ Build the Docker image
-
-    docker build -t fastapi-ml-app .
-    
-
-### 2️⃣ Run the container
-
-    docker run -p 8000:8000 fastapi-ml-app
     
 
 ## 📡 API Endpoints
