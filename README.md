@@ -1,4 +1,4 @@
-# 🧠 MLServe - FastAPI ML Model Deployment
+# 🧠 StockSage - A smart API for stock price predictions using FastAPI and Prophet.
 
 🚧 UNDER ACTIVE DEVELOPMENT 🚧
 
@@ -29,7 +29,7 @@
 
 ## 💡 Overview
 
-This project demonstrates how to **serve a machine learning model** using **FastAPI** and **Docker** into production as a RESTful API using FastAPI. The API allows users to send data and receive stock price predictions using [Prophet](https://facebook.github.io/prophet/) ML model.
+This project demonstrates how to deploy a machine learning model using FastAPI and Docker, exposing it as a production-ready RESTful API. It allows users to send stock data and receive price forecasts powered by the [Prophet](https://facebook.github.io/prophet/) time series model.
 
 ##  ✨ Features
 
