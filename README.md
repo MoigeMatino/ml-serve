@@ -1,4 +1,4 @@
-# 🧠 StockSage - A smart API for stock price predictions using FastAPI and Prophet.
+# 📈🔮 StockSage - A smart API for stock price predictions using FastAPI and Prophet.
 
 🚧 UNDER ACTIVE DEVELOPMENT 🚧
 
